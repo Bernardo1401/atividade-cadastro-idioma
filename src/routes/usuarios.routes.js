@@ -1,13 +1,15 @@
 import { Router } from "express";
 
-const usuariosRoutes = Router();
+const idiomasRoutes = Router();
 
-let usuarios = [];
+let idiomas = [];
 
-usuariosRoutes.get("/", (req, res) => {
+idiomasRoutes.get("/", (req, res) => {
     return res.status(200).json({
-        message: usuarios.length == 0 ? "Não há usuários cadastrados" : `Total de usuários cadastrados: ${usuarios.length}`, usuarios,
+        message: idiomas.length ==0 ? "Não há idiomas cadastrados" : `Total de idiomas cadastrados: ${idiomas.length}`, idiomas,
+
     });
 });
 
-export default usuariosRoutes;
+
+export default idiomasRoutes;
